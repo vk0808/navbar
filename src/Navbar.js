@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
       <div className="nav-header">
-        <h1>LOGO</h1>
+        <h3 className="logo">LOGO</h3>
         <button className="nav-toggle">
           <FaBars />
         </button>       
