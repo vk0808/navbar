@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { data } from './data';
 
 const Navbar = () => {
   return (
