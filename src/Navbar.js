@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
-import { data } from './data';
+import { links, social } from './data';
 
 const Navbar = () => {
   return (
@@ -14,16 +14,21 @@ const Navbar = () => {
       </div>
       <div className="links-container show-container">
         <ul className="links">
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">product</a></li>
+          {links.map((link)=> {
+            const {id, url, text} = link;
+            return <li key={id}>
+              <a href={url}>{text}</a>
+            </li>
+          })}
         </ul>
       </div>
       <ul className="social-icons">
-        <li><a href="https://www.twitter.com"><FaTwitter /></a></li>
-        <li><a href="https://www.facebook.com"><FaFacebook /></a></li>
-        <li><a href="https://www.instagram.com"><FaInstagram /></a></li>
+        {social.map((socialIcon)=> {
+          const {id, url, icon} = socialIcon;
+          return <li key={id}>
+            <a href={url}>{icon}</a>
+          </li>
+        })}
       </ul>
       </div>
     </nav>
