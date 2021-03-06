@@ -16,6 +16,7 @@ const Navbar = () => {
     }
   }, [showLinks]);
   return (
+    <>
     <nav>
       <div className="nav-center">
         <div className="nav-header">
@@ -39,18 +40,21 @@ const Navbar = () => {
             })}
           </ul>
         </div>
-        <ul className="social-icons">
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </nav>
+    <footer>
+      <ul className="social-icons">
+        {social.map((socialIcon) => {
+          const { id, url, icon } = socialIcon;
+          return (
+            <li key={id}>
+              <a href={url}>{icon}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </footer>
+    </>
   );
 };
 
